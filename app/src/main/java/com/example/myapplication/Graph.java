@@ -41,27 +41,14 @@ public class Graph {
 
     }
 
-    /**
-     * @return
-     * returns the desired room inputed by the user
-     */
-    public int getDesiredRoom() {
-        return DesiredRoom;
-    }
 
-    /**
-     * @param room, sets room the number for the desired room
-     */
-    public void setDesiredRoom(int room){
-        DesiredRoom = room;
 
-    }
 
     public int[] getVisited() {
         return visited;
     }
 
-    public void addVisited(int i, int v){
+    private void addVisited(int i, int v){
         visited[i] = v;
 
     }
@@ -136,7 +123,7 @@ public class Graph {
      * This method checks if the roomNum passed as an argument matches the DesiredRoom.
      * @return true if there is a match, indicating that the desired room has been found.
      */
-    public boolean foundRoom(int roomNum)
+    private boolean foundRoom(int roomNum)
     {
         return roomNum == DesiredRoom; // returns true if the para  is equal to the  DesiredRoom, or false if not
     }
