@@ -4,25 +4,40 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Button;
+
 import com.google.android.material.textfield.TextInputEditText;
 
-import java.util.LinkedList;
 
+/**
+ * MainActivity is the main activity of the Android Map Navigation App.
+ * It allows users to input current and next room numbers and navigate to the
+ * MainActivity2 activity to display the navigation path.
+ */
 
 public class MainActivity extends AppCompatActivity {
     private String currentRoom;
     private String nextRoom;
+    /**
+     * Called when the activity is first created.
+     *
+     * @param savedInstanceState If the activity is being re-initialized after previously being
+     *                           shut down, this Bundle contains the data it most recently supplied
+     *                           in onSaveInstanceState(Bundle). Otherwise, it is null.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    /**
+     * Opens MainActivity2 to display the navigation path based on the entered current and next room numbers.
+     *
+     * @param v The View that was clicked.
+     */
 
     public void openMainActivity2(View v){
 
@@ -36,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    /**
+     * Sets the current room number based on the user input.
+     *
+     * @param v The View that was clicked.
+     */
 
 
     public void CurEnter(View v){
@@ -50,6 +70,12 @@ public class MainActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.textCurr)).setText("Current room: C1 - "+ CurrentN);
 
     }
+
+    /**
+     * Sets the next room number based on the user input.
+     *
+     * @param v The View that was clicked.
+     */
 
     public void NextEnter(View v){
 
