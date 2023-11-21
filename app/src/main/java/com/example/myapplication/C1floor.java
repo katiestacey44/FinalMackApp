@@ -12,7 +12,7 @@ public class C1floor {
 
 
 
-    public C1floor(float scaleValr,int currRoom, int nextRoom) {
+    public C1floor(float scaleVale,int currRoom, int nextRoom) {
 
         int currentRoom = currRoom - 100;
         int desiredRoom = nextRoom - 100;
@@ -21,12 +21,11 @@ public class C1floor {
 
         C1.DFS(currentRoom);
         visitedArr = C1.getVisited();
-        p = new PathMaker(scaleValr,visitedArr);
+        p = new PathMaker(scaleVale,visitedArr);
         path = p.getPath();
     }
     public Path getPath()
     {
-
         return path;
     }
 

@@ -12,8 +12,8 @@ public class PathMaker {
 
 
 
-    public PathMaker(float scaler, int[] Array){
-        scaleVal  = scaler;
+    public PathMaker(float scale, int[] Array){
+        scaleVal  = scale;
         P = new Path();
         pointArray = new Point[70];
         // Initialize the array with Point objects
@@ -35,15 +35,6 @@ public class PathMaker {
 
     }
 
-    public boolean check(int num){
-        boolean result = false;
-        if (pointArray[num] != null && num < 60)
-        {
-          result = true;
-        }
-        return result;
-
-    }
 
     public float getX(int num){
 
